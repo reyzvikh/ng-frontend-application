@@ -34,6 +34,7 @@ declare module 'styled-components' {
 			darkGrey: string;
 			lightGrey: string;
 			black: string;
+			lightBrown: string;
 		};
 	}
 }

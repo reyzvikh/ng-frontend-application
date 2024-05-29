@@ -39,6 +39,7 @@ export const darkTheme: DefaultTheme = {
 		grey: '#8E8E8E',
 		darkGrey: '#212121',
 		lightGrey: '#7A7A7A',
-		black: '#0F0F0F'
+		black: '#0F0F0F',
+		lightBrown: '#40382C',
 	}
 };
