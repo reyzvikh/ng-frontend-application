@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import { cinzel } from '@/styles/GlobalStyles';
 import { CLIP_PATH_DEFAULT, CLIP_PATH_DEFAULT_INNER } from '@/constants/clipPath';
@@ -44,10 +45,14 @@ export const Container = styled.div`
     }
 `;
 
-export const Cover = styled.img`
+export const Cover = styled.div`
+    position: relative;
     clip-path: ${CLIP_PATH_DEFAULT};
     height: ${({ theme }) => theme.spacing['3xl']};
     width: 100%;
+`;
+
+export const StyledImage = styled(Image)`
     object-fit: cover;
 `;
 

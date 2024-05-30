@@ -8,6 +8,7 @@ import { useTheme } from 'styled-components';
 import { expAtom, goldAtom } from '@/store';
 import {
     AccountInfoWrapper,
+    Logo,
     Avatar,
     Container,
     SquareDivider,
@@ -21,11 +22,21 @@ export default function Header() {
 
     return (
         <Container>
-            <Image src="/logo.svg" alt="header-logo" height={35} width={285} />
+            <Logo>
+                <picture>
+                    <source media="(max-width: 768px)" srcSet="/logo_mobile.svg" />
+                    <Image
+                        src="/logo.svg"
+                        alt="header-logo"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                    />
+                </picture>
+            </Logo>
 
             <AccountInfoWrapper>
-                <Stats type={StatsType.gold} value={gold} color={theme.colors.gold} />
-                <SquareDivider />
+                <Stats type={StatsType.gold} value={gold} color={theme.colors.gold}/>
+                <SquareDivider/>
                 <Stats type={StatsType.exp} value={exp} color={theme.colors.gold} />
 
                 <Avatar>

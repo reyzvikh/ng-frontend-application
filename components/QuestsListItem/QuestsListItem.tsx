@@ -9,6 +9,7 @@ import {
     Container,
     ChipsWrapper,
     QuestDetails,
+    StyledImage,
     GeneralInformationContainer,
 } from './QuestsListItem-styled';
 
@@ -21,7 +22,15 @@ export default function QuestsListItem({ data }: QuestCardProps) {
 
     return (
         <Container onClick={() => router.push(`/quests/${data.slug}`)}>
-            <Cover src={data.cover} alt={data.title} />
+            <Cover>
+                <StyledImage
+                    src={data.cover}
+                    alt={data.title}
+                    priority
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                />
+            </Cover>
             <QuestDetails>
                 <GeneralInformationContainer>
                     <Title>{data.title}</Title>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import { CLIP_PATH_DEFAULT } from '@/constants/clipPath';
 import { cinzel, interRegular } from '@/styles/GlobalStyles';
@@ -26,10 +27,14 @@ export const StyledCard = styled.div`
     }
 `;
 
-export const Cover = styled.img`
+export const Cover = styled.div`
+    position: relative;
     clip-path: ${CLIP_PATH_DEFAULT};
     height: ${({ theme }) => theme.spacing['8xl']};
     width: 100%;
+`;
+
+export const StyledImage = styled(Image)`
     object-fit: cover;
 `;
 

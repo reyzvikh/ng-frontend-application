@@ -35,6 +35,7 @@ const StyledRoot = styled.div`
 
     @media only screen and (max-width: 768px) {
         margin: 0 ${({ theme }) => theme.spacing['6xs']} ${({ theme }) => theme.spacing['3xs']};
+        height: 85dvh;
     }
 `;
 

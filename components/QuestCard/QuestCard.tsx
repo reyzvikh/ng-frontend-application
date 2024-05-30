@@ -14,6 +14,7 @@ import {
     QuestCardWrapper,
     RewardsBlock,
     StyledCard,
+    StyledImage,
     Title,
 } from './QuestCard-styled';
 
@@ -34,7 +35,15 @@ export default function QuestCard({ quest }: QuestCardProps) {
     return (
         <QuestCardWrapper>
             <StyledCard>
-                <Cover src={quest.cover} alt={quest.slug} />
+                <Cover style={{ position: 'relative' }}>
+                    <StyledImage
+                        src={quest.cover}
+                        alt={quest.slug}
+                        priority
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                    />
+                </Cover>
                 <Title>{quest.title}</Title>
 
                 <DetailsWrapper>

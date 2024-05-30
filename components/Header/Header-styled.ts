@@ -10,6 +10,21 @@ export const Container = styled.div`
     height: ${({ theme }) => theme.spacing['3xl']};
     width: 100%;
     color: ${({ theme }) => theme.colors.white};
+
+    @media only screen and (max-width: 768px) {
+        padding: 2.5%;
+    }
+`;
+
+export const Logo = styled.div`
+    position: relative;
+    width: 285px;
+    height: 35px;
+
+    @media only screen and (max-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
 `;
 
 export const AccountInfoWrapper = styled.div`
