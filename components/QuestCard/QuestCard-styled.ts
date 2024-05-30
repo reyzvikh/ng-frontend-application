@@ -17,8 +17,13 @@ export const StyledCard = styled.div`
     background: ${({ theme }) => theme.colors.black};
     padding: ${({ theme }) => `${theme.spacing['2xs']} ${theme.spacing['3xs']}`};
 
-    height: 500px;
-    width: 70%;
+    min-height: 500px;
+    width: 550px;
+
+    @media only screen and (max-width: 768px) {
+        width: 95%;
+        height: auto;
+    }
 `;
 
 export const Cover = styled.img`
@@ -46,6 +51,12 @@ export const DetailsWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: ${({ theme }) => theme.spacing['3xs']};
+    }
 `;
 
 export const DetailsBlock = styled.div`
@@ -61,4 +72,9 @@ export const RewardsBlock = styled(DetailsBlock)`
 export const Actions = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: ${({ theme }) => theme.spacing['3xs']};
+    }
 `;
