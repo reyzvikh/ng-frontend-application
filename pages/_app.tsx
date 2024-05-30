@@ -10,9 +10,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <StyledComponentsRegistry>
             <ThemeProvider theme={darkTheme}>
                 <GlobalStyles />
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
             </ThemeProvider>
         </StyledComponentsRegistry>
     );

@@ -12,7 +12,7 @@ export default function Chip({ icon, children }: PropsWithChildren<ChipProps>) {
     return (
         <StyledChip>
             {icon && <Image src={icon} alt="icon" width={18} height={18} />}
-            {children}
+            {typeof children === 'string' ? <span>{children}</span> : children}
         </StyledChip>
     );
 }

@@ -1,0 +1,5 @@
+export const CLIP_PATH_DEFAULT = 'polygon(calc(100% - 9px) 0%, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0% calc(100% - 9px), 0% 9px, 9px 0%)';
+export const CLIP_PATH_DEFAULT_INNER = 'polygon(calc(100% - 8.5px) 0.5px, calc(100% - 0.5px) 8.5px, calc(100% - 0.5px) calc(100% - 8.5px), calc(100% - 8.5px) calc(100% - 0.5px), 8.5px calc(100% - 0.5px), 0.5px calc(100% - 8.5px), 0.5px 8.5px, 8.5px 0.5px)';
+
+export const CLIP_PATH_SMALL = 'polygon(calc(100% - 6px) 0%, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0% calc(100% - 6px), 0% 6px, 6px 0%)';
+export const CLIP_PATH_SMALL_INNER = 'polygon(calc(100% - 5.5px) 0.5px, calc(100% - 0.5px) 5.5px, calc(100% - 0.5px) calc(100% - 5.5px), calc(100% - 5.5px) calc(100% - 0.5px), 5.5px calc(100% - 0.5px), 0.5px calc(100% - 5.5px), 0.5px 5.5px, 5.5px 0.5px)';

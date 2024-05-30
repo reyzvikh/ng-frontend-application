@@ -56,15 +56,13 @@ export const ClientProviders = ({ children }: { children: ReactNode }) => {
 	return (
 		<>
 			<PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
-				<Provider>
-					<ThemeProvider theme={darkTheme}>
-						<GlobalStyles />
+				<ThemeProvider theme={darkTheme}>
+					<GlobalStyles />
 
-						{/* ======= End Store ======== */}
-						{children}
-					</ThemeProvider>
-					<ReactQueryDevtools initialIsOpen={false} />
-				</Provider>
+					{/* ======= End Store ======== */}
+					{children}
+				</ThemeProvider>
+				<ReactQueryDevtools initialIsOpen={false} />
 			</PersistQueryClientProvider>
 		</>
 	);

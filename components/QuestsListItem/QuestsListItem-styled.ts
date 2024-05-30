@@ -1,28 +1,52 @@
 import styled from 'styled-components';
 import { cinzel } from '@/styles/GlobalStyles';
+import { CLIP_PATH_DEFAULT, CLIP_PATH_DEFAULT_INNER } from '@/constants/clipPath';
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing['3xs']};
     padding: ${({ theme }) => theme.spacing['2xs']};
-    border: ${({ theme }) => `1px solid ${theme.colors.darkGrey}`};
     height: 230px;
     cursor: pointer;
+    width: calc(33% - 8px);
+
+    @media only screen and (max-width: 1440px) {
+        width: calc(50% - 6px);
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    position: relative;
+
+    &::before, &::after {
+        z-index: 0;
+        content: "";
+        position: absolute;
+    }
+
+    &::before {
+        inset: 0;
+        clip-path: ${CLIP_PATH_DEFAULT};
+        background: ${({ theme }) => theme.colors.darkGrey};
+    }
+
+    &::after {
+        inset: 1px;
+        clip-path: ${CLIP_PATH_DEFAULT_INNER};
+        background: ${({ theme }) => theme.colors.black};
+    }
+    
+    & > * {
+        z-index: 1;
+    }
 `;
 
 export const Cover = styled.img`
-    clip-path: polygon(
-        4px 0%,
-        calc(100% - 4px) 0%,
-        100% 4px,
-        100% calc(100% - 4px),
-        calc(100% - 4px) 100%,
-        4px 100%,
-        0% calc(100% - 4px),
-        0% 4px
-    );
-    height: 86px;
+    clip-path: ${CLIP_PATH_DEFAULT};
+    height: ${({ theme }) => theme.spacing['3xl']};
     width: 100%;
     object-fit: cover;
 `;

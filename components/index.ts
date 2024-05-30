@@ -4,3 +4,5 @@ export { default as Layout } from './Layout/Layout';
 export { default as Stats } from './Stats/Stats';
 export { default as QuestsListItem } from './QuestsListItem/QuestsListItem';
 export { default as QuestCard } from './QuestCard/QuestCard';
+export { default as Button } from './Button/Button';
+export { default as DifficultyMeter } from './DifficultyMeter/DifficultyMeter';

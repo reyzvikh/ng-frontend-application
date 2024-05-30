@@ -1,8 +1,7 @@
 'use client'
 
-import { Chip } from '@/components';
+import { Chip, DifficultyMeter } from '@/components';
 import { useRouter } from 'next/navigation';
-import { DifficultyMeter } from './DifficultyMeter';
 import { Rewards } from './Rewards';
 import {
     Title,

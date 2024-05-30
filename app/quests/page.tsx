@@ -6,10 +6,11 @@ import { QuestsListItem } from '@/components';
 import { fetchQuests } from '@/services/api';
 
 const StyledRoot = styled.div`
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    display: flex;
+    flex-flow: wrap;
+    gap: ${({ theme }) => theme.spacing['3xs']};
+    justify-content: space-evenly;
+
     margin: 0 ${({ theme }) => theme.spacing['6xl']} ${({ theme }) => theme.spacing['3xl']};
     padding: ${({ theme }) => theme.spacing.m};
     height: 80vh;
@@ -26,6 +27,14 @@ const StyledRoot = styled.div`
     
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        margin: 0 ${({ theme }) => theme.spacing.l} ${({ theme }) => theme.spacing.m};
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin: 0 ${({ theme }) => theme.spacing['6xs']} ${({ theme }) => theme.spacing['3xs']};
     }
 `;
 
